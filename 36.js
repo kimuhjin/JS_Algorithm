@@ -8,10 +8,19 @@
 출력 : 2 4 6 8 10 12 14 16 18
 */
 // 내 답안
-// const unsorted = prompt('키를 입력하세요');
 const num = prompt("숫자를 입력하세요");
 let output = [];
 for (let i = 1; i < 10; i++) {
   output.push(num * i);
 }
 console.log(output.join(" "));
+
+// 답안
+const num = prompt("1 ~ 9까지의 숫자 중 하나를 입력하세요.");
+let result = "";
+
+for (let i = 1; i <= 9; i++) {
+  result += i * num + " ";
+}
+
+console.log(result);
