@@ -80,17 +80,22 @@ function mergeSort(arr) {
 function merge(left, right) {
   let result = [];
   while (left.length && right.length) {
+    // 오른쪽 과 왼쪽의 배열 길이가 1 이상일때 동작하고,
     if (left[0] < right[0]) {
       result.push(left.shift());
+      // 만약 오른쪽의 첫번째 배열의 수가 더 크다면 왼쪽의 숫자를 result 배열에 추가하고,
     } else {
       result.push(right.shift());
+      // 왼쪽의 첫번째 배열의 수가 더 크다면 왼쪽의 숫자를 result 배열에 추가한다.
     }
   }
   while (left.length) {
     result.push(left.shift());
+    // 왼쪽 배열에 숫자가 남아있다면 왼쪽 배열을 result에 넣고
   }
   while (right.length) {
     result.push(right.shift());
+    // 오른쪽 배열에 숫자가 남아있다면 오른쪽 배열을 result에 넣는다.
   }
 
   return result;
