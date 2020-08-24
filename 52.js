@@ -62,7 +62,7 @@ function quickSort(arr) {
     }
   }
   return quickSort(left).concat(pivot, quickSort(right));
-  // 이렇게 sort된 left값과 pivot값, rifht값을 concat으로 이어 붙여준다.
+  // 이렇게 sort된 left값과 pivot값, right값을 concat으로 이어 붙여준다.
   // quickSort()를 .concat하는 이유는 한 번만 재배치 하는게 아니라 끝까지 재배치해 맨 위에 if(arr.length<=1)문이 실행 될 때까지 쪼개야 되기 때문이다.
 }
 const array = [1, 3, 2, 7, 5, 6, 4, 8, 9, 10];
