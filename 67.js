@@ -25,7 +25,7 @@
 */
 
 // 답안
-function solution(n) {
+function solution(number) {
   let 사람 = 0;
   let 총악수 = 0;
   let temp = 0;
