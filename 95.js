@@ -81,3 +81,49 @@ const 도장 = [
 ];
 const 회전 = 5;
 console.log(solution(도장, 회전));
+
+// 답안
+function solution(stmp, k) {
+  let N = stmp.length;
+  let p = [];
+  for (let i = 0; i < N; i++) {
+    p.push(Array(N).fill(0));
+  }
+  // 회전시키기전 최초 1번 찍어주기
+  p = sum_matrix(p, stmp);
+  for (let i = 0; i < k; i++) {
+    stmp = rotate(stmp);
+    p = sum_matrix(p, stmp);
+  }
+  return p;
+}
+function rotate(stmp) {
+  let N = stmp.length;
+  let rot = [];
+  for (let i = 0; i < N; i++) {
+    rot.push(Array(N).fill(0));
+  }
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      rot[j][N - 1 - i] = stmp[i][j];
+    }
+  }
+  return rot;
+}
+function sum_matrix(p, stmp) {
+  let N = stmp.length;
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      p[i][j] += stmp[i][j];
+    }
+  }
+  return p;
+}
+const 도장 = [
+  [1, 1, 1, 2],
+  [2, 0, 0, 0],
+  [1, 1, 1, 1],
+  [0, 0, 0, 0],
+];
+const 회전 = 1;
+console.log(solution(도장, 회전));
