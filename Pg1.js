@@ -37,10 +37,11 @@ const commands = [
 // 답안 1
 function solution(array, commands) {
   return commands.map((v) => {
-    return array
-      .slice(v[0] - 1, v[1])
-      .sort((a, b) => a - b)
-      .slice(v[2] - 1, v[2])[0];
+    // commands를 순회하여 3개 command를 호출하고
+    return array // array를 불러와,
+      .slice(v[0] - 1, v[1]) // command의 0번째 인덱스값-1부터 1번째 값까지 slice하고
+      .sort((a, b) => a - b) // slice된 배열을 오름차순으로 sorting한 뒤,
+      .slice(v[2] - 1, v[2])[0]; // sorting된 배열의 3번째 인덱스값 -1 부터 3번째 인덱스값까지 slice한 값을 array로 반환한다.
   });
 }
 
