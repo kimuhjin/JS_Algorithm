@@ -333,7 +333,7 @@ console.log(str.replace('abc', '!')) // ! abcd abcde ab cd def
 console.log(str.replace(/abc/g, '!')) // ! !d !de ab cd def
 console.log(str.replace(/ /g, '-')) // abc-abcd-abcde-ab-cd-def
 
-● slice() : 인덱스를 기주으로 문자열을 잘라내 반환합니다.
+● slice() : 인덱스를 기준으로 문자열을 잘라내 반환합니다.
 ● indexOf() : 주어진 문자열과 첫번째로 만나는 문자열의 인덱스를 반환합니다.
 
 let str = '눈떠보니 코딩 테스트 전날'
