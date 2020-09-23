@@ -1,4 +1,5 @@
 /*
+:: 코딩테스트 고득점 Kit ::
 [배열] 가장 큰 수
 
 문제 설명
@@ -21,7 +22,7 @@ numbers         	    return
 const numbers = [6, 10, 2];
 const numbers = [3, 30, 34, 5, 9];
 
-// 답안 1
+// 답안
 function solution(numbers) {
   var answer = numbers
     .map((v) => v + "") // 해당 숫자들을 v + ''를 통해 string으로 변환한다. (String(v)으로 변환해도 된다.)
